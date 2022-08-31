@@ -2,8 +2,8 @@
   <nav class="navbar navbar-dark navbar-expand-lg bg-navbar">
     <div class="container">
       <h1 class="header-logo">
-        <a class="navbar-brand" href="#"
-          ><i class="bi bi-code-slash"></i> PascalApp</a
+        <a class="navbar-brand" routerLink=""
+          ><i class="bi bi-code-slash"></i> Saham Indonesia</a
         >
       </h1>
       <button
@@ -20,43 +20,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink=""
-              >Beranda</a
-            >
+            <a class="nav-link" aria-current="page" routerLink="">Beranda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="" [ngxScrollTo]="'#about'"
-              >Tentang</a
-            >
+            <a class="nav-link" routerLink="/tentang-kami">Tentang Kami</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="" [ngxScrollTo]="'#service'"
-              >Layanan</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="" [ngxScrollTo]="'#portofolio'"
-              >Portofolio</a
-            >
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Demo
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" routerLink="/demo/resume">Resume</a>
-              </li>
-              <li>
-                <a class="dropdown-item" routerLink="/demo/todos">Todo</a>
-              </li>
-            </ul>
+            <a class="nav-link" routerLink="/article">Artikel</a>
           </li>
         </ul>
       </div>

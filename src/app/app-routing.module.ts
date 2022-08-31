@@ -1,23 +1,23 @@
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
-import { HomeComponent } from "./pages/home/home.component";
-import { ResumeComponent } from "./pages/resume/resume.component";
-import { TodosComponent } from "./pages/todos/todos.component";
-import { NotFoundComponent } from "./shared/components/not-found/not-found.component";
+import { AboutComponent } from './pages/about/about.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./pages/pages.module').then((m) => m.PagesModule)
+    loadChildren: () =>
+      import('./pages/pages.module').then((m) => m.PagesModule),
   },
+
   {
     path: '**',
-    component: NotFoundComponent
-  }
+    component: NotFoundComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -1,25 +1,26 @@
+import { AboutComponent } from './about/about.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ResumeComponent } from './resume/resume.component';
-import { TodosComponent } from './todos/todos.component';
+import { ArticleComponent } from './article/article.component';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
   },
   {
-    path: 'demo/resume',
-    component: ResumeComponent
+    path: 'tentang-kami',
+    component: AboutComponent,
   },
   {
-    path: 'demo/todos',
-    component: TodosComponent
-  }
+    path: 'article',
+    loadChildren: () =>
+      import('./article/article.module').then((m) => m.ArticleModule),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class PageRoutingModule { }
+export class PageRoutingModule {}
